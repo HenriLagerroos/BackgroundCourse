@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Taustajärjestelmät2/1.0.0": {
+        "runtime": {
+          "Taustajärjestelmät2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Taustajärjestelmät2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

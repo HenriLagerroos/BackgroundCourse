@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0nW/Zhw1XiUmKnHm+U3utkoH65JkjBDdg2SNnknIbJUIRji6FvVllacEGHb8TlRPP4f22dMjioI+MkLZ+INAvA==",
+  "success": true,
+  "projectFilePath": "D:\\BackgroundCourse\\Testing\\Testing.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Henkka\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
