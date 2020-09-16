@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xbEQ7ekiXbOoHX0pqV+80L/Qbk2oK824umdc0ZWmjiKOEhxVnHzAnjFh3pYb3LqLdUPEbogJv7VN1+bhU0amDw==",
+  "success": true,
+  "projectFilePath": "D:\\BackgroundCourse\\GameWebApi\\GameWebApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Henkka\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
