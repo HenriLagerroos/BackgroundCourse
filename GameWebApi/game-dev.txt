@@ -1,1 +1,1 @@
-[{"Id":"c1ebb247-d933-4da1-955d-438e56c23272","Name":"asaaasadssa","Score":0,"Level":0,"IsBanned":false,"CreationTime":"0001-01-01T00:00:00"}]
+[{"Id":"c1ebb247-d933-4da1-955d-438e56c23272","Name":"asaaasadssa","Score":0,"Level":0,"IsBanned":false,"CreationTime":"0001-01-01T00:00:00","Items":[]},{"Id":"8888aff4-7c84-48da-a5fc-992ce78650a9","Name":"jorma","Score":0,"Level":0,"IsBanned":false,"CreationTime":"0001-01-01T00:00:00","Items":[]}]

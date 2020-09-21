@@ -18,13 +18,14 @@ public class PlayerController : ControllerBase
     [HttpPost("{id}")]
     public async Task<Player> Get(Guid id)
     {
-        return await _repo.Get(id);
+        Player player = await _repo.GetPlayer(id);
+        return player;
     }
-
+ 
     [HttpGet]
     public async Task<Player[]> GetAll()
     {
-        return await _repo.GetAll();
+        return await _repo.GetAllPlayers();
     }
 
     [HttpPost("create")]
@@ -33,19 +34,22 @@ public class PlayerController : ControllerBase
         Player player = new Player();
         player.Id = Guid.NewGuid();
         player.Name = newPlayer.Name;
-        return await _repo.Create(player);
+        return await _repo.CreatePlayer(player);
     }
 
 
     [HttpPost("modify/{id}")]
-    public async Task<Player> Modify(Guid id, [FromBody] ModifiedPlayer player)
+    public async Task<Player> Modify(Guid id, ModifiedPlayer modifiedPlayer)
     {
-        return await _repo.Modify(id, player);
+        Player player = await _repo.GetPlayer(id);
+        player.Score = modifiedPlayer.Score;
+        player.Level = modifiedPlayer.Level;
+        return await _repo.UpdatePlayer(player);
     }
 
     [HttpPost("delete/{id}")]
     public async Task<Player> Delete(Guid id)
     {
-        return await _repo.Delete(id);
+        return await _repo.DeletePlayer(id);
     }
 }

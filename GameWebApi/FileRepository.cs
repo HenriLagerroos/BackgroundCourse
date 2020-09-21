@@ -9,17 +9,19 @@ public class FileRepository : IRepository
 {
     private const string filePath = "game-dev.txt";
 
-    public async Task<Player> Create(Player player)
+#region Player
+    public async Task<Player> CreatePlayer(Player player)
     {
-        List<Player> response = (await GetAll()).ToList();
+        List<Player> response = (await GetAllPlayers()).ToList();
         response.Add(player);
         File.WriteAllText(filePath, JsonConvert.SerializeObject(response));
         return player;
     }
 
-    public async Task<Player> Delete(Guid id)
+
+    public async Task<Player> DeletePlayer(Guid id)
     {
-        List<Player> response = (await GetAll()).ToList();
+        List<Player> response = (await GetAllPlayers()).ToList();
         
         for(int i = 0; i < response.Count; i++ )
         {
@@ -34,9 +36,9 @@ public class FileRepository : IRepository
         return null;
     }
 
-    public async Task<Player> Get(Guid id)
+    public async Task<Player> GetPlayer(Guid id)
     {
-        Player[] response = await GetAll();
+        Player[] response = await GetAllPlayers();
         
         for(int i = 0; i < response.Length; i++ )
         {
@@ -49,7 +51,7 @@ public class FileRepository : IRepository
         return null;
     }
 
-    public async Task<Player[]> GetAll()
+    public async Task<Player[]> GetAllPlayers()
     {
         if (!File.Exists(filePath)) 
             return new Player[0];
@@ -59,13 +61,15 @@ public class FileRepository : IRepository
         return JsonConvert.DeserializeObject<Player[]>(json);    
     }
 
-    public async Task<Player> Modify(Guid id, ModifiedPlayer player)
+
+
+    public async Task<Player> UpdatePlayer(Player player)
     {
-        Player[] response = await GetAll();
+        Player[] response = await GetAllPlayers();
         
         for(int i = 0; i < response.Length; i++ )
         {
-            if(response[i].Id == id)
+            if(response[i].Id == player.Id)
             {
                 response[i].Score = player.Score;
                 return response[i];
@@ -74,4 +78,35 @@ public class FileRepository : IRepository
         }
         return null;
     }
+#endregion
+
+
+#region Item
+
+    public Task<Item> CreateItem(Guid playerId, Item item)
+    {
+        throw new NotImplementedException();
+    }
+
+    Task<Item> IRepository.GetItem(Guid playerId, Guid itemId)
+    {
+        throw new NotImplementedException();
+    }
+
+    Task<Item[]> IRepository.GetAllItems(Guid playerId)
+    {
+        throw new NotImplementedException();
+    }
+
+    Task<Item> IRepository.UpdateItem(Guid playerId, Item item)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<Item> DeleteItem(Guid playerId, Item item)
+    {
+        throw new NotImplementedException();
+    }
+
+    #endregion
 }

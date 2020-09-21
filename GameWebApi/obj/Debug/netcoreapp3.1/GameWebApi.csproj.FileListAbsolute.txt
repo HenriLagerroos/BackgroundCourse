@@ -42,3 +42,12 @@ D:\BackgroundCourse\GameWebApi\obj\Debug\netcoreapp3.1\staticwebassets\GameWebAp
 D:\BackgroundCourse\GameWebApi\obj\Debug\netcoreapp3.1\GameWebApi.dll
 D:\BackgroundCourse\GameWebApi\obj\Debug\netcoreapp3.1\GameWebApi.pdb
 D:\BackgroundCourse\GameWebApi\obj\Debug\netcoreapp3.1\GameWebApi.genruntimeconfig.cache
+D:\BackgroundCourse\GameWebApi\bin\Debug\netcoreapp3.1\DnsClient.dll
+D:\BackgroundCourse\GameWebApi\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
+D:\BackgroundCourse\GameWebApi\bin\Debug\netcoreapp3.1\MongoDB.Driver.dll
+D:\BackgroundCourse\GameWebApi\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
+D:\BackgroundCourse\GameWebApi\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
+D:\BackgroundCourse\GameWebApi\bin\Debug\netcoreapp3.1\SharpCompress.dll
+D:\BackgroundCourse\GameWebApi\bin\Debug\netcoreapp3.1\runtimes\win\native\libzstd.dll
+D:\BackgroundCourse\GameWebApi\bin\Debug\netcoreapp3.1\runtimes\win\native\snappy32.dll
+D:\BackgroundCourse\GameWebApi\bin\Debug\netcoreapp3.1\runtimes\win\native\snappy64.dll

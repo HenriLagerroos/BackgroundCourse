@@ -28,12 +28,14 @@ namespace GameWebApi
             //services.AddDbContext<ApplicationDbContext>(
 	        //options => options.UseInMemoryDatabase()); // Add database 	context using extension method
             services.AddControllers();
-            services.AddSingleton<IRepository, FileRepository>(); // Register class PlayerRepository as IPlayerRepository
+            services.AddSingleton<IRepository, MongoDbRepository>(); // Register class PlayerRepository as IPlayerRepository
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseErrorHandlingMiddleware();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
