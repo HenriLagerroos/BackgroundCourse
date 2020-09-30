@@ -8,6 +8,7 @@ public class Player
     public Player()
     {
         Items = new List<Item>();
+        Tags = new List<string>();
     }
 
     public Guid Id { get; set; }
@@ -17,6 +18,7 @@ public class Player
     public bool IsBanned { get; set; }
     public DateTime CreationTime { get; set; }
     public List<Item> Items {get; set;}
+    public List<String> Tags {get; set;}
 
     public static implicit operator Task<object>(Player v)
     {
@@ -33,4 +35,5 @@ public class ModifiedPlayer
 {
     public int Score { get; set; }
     public int Level { get; set; }
+    public string AddTag { get; set; }
 }

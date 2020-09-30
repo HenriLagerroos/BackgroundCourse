@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-public class FileRepository : IRepository
+public class FileRepository //: IRepository
 {
     private const string filePath = "game-dev.txt";
 
@@ -80,33 +80,4 @@ public class FileRepository : IRepository
     }
 #endregion
 
-
-#region Item
-
-    public Task<Item> CreateItem(Guid playerId, Item item)
-    {
-        throw new NotImplementedException();
-    }
-
-    Task<Item> IRepository.GetItem(Guid playerId, Guid itemId)
-    {
-        throw new NotImplementedException();
-    }
-
-    Task<Item[]> IRepository.GetAllItems(Guid playerId)
-    {
-        throw new NotImplementedException();
-    }
-
-    Task<Item> IRepository.UpdateItem(Guid playerId, Item item)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<Item> DeleteItem(Guid playerId, Item item)
-    {
-        throw new NotImplementedException();
-    }
-
-    #endregion
 }

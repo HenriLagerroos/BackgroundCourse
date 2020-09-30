@@ -21,12 +21,24 @@ public class ItemController : ControllerBase
         return await _repo.GetItem(playerID, id);
     }
 
+    [HttpDelete("{id}")]
+    public async Task<Player> SellItem(Guid playerID, Guid id)
+    {
+        Item item = await _repo.GetItem(playerID, id);
+        if (item == null || item.Id != id) throw new IdNotFoundException();
+        //One level is one unity of currency !
+        return await _repo.SellItem(playerID, id, item.Level); 
+    }
+
+
     [HttpGet]
     public async Task<Item[]> GetAll(Guid playerID)
     {
         return await _repo.GetAllItems(playerID);
     }
 
+
+    //Pushes straigt to player, Getplayer is only for exceptions
     [NotGoodEnoughFilter]
     [HttpPost("create")]
     public async Task<Item> Create(Guid playerID, [FromBody] NewItem newItem)
@@ -44,6 +56,7 @@ public class ItemController : ControllerBase
         item.CreationDate = DateTime.Now;
         return await _repo.CreateItem(playerID, item);
     }
+
 
     [HttpPost("modify/{id}")]
     public async Task<Item> Modify(Guid playerID, Guid id, ModifiedItem modItem)
